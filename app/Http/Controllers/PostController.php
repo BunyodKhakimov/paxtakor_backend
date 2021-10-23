@@ -49,7 +49,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = DB::table('posts')->where('id', $id)->get();
+        return response($post);
     }
 
     /**
