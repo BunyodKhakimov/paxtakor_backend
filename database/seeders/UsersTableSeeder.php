@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
             'name' => "Test Admin",
             'email' => 'admin@gmail.com',
             'password' => Hash::make("adminpass"),
+            'isVerified' => true,
         ]);
     }
 }
