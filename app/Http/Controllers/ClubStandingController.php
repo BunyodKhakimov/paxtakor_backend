@@ -14,7 +14,7 @@ class ClubStandingController extends Controller
      */
     public function index()
     {
-        $club_standings = DB::table('club-standings')->get()->all();
+        $club_standings = DB::table('club_standings')->get()->all();
 
         return response($club_standings);
     }

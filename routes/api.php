@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ClubStandingController;
 use App\Http\Controllers\PostController;
-use App\Models\ClubStanding;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +29,4 @@ Route::get('/register', [AuthController::class, 'register'])->name('custom.regis
 
 Route::get('/verify', [AuthController::class, 'verify'])->name('custom.verify');
 
-Route::get('/club-standings', [ClubStanding::class, 'index'])->name('custom.club_standings.index');
+Route::get('/club-standings', [ClubStandingController::class, 'index'])->name('custom.club_standings.index');
