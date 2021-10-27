@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use App\Models\ClubStanding;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,5 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('api.posts.show
 Route::get('/register', [AuthController::class, 'register'])->name('custom.register');
 
 Route::get('/verify', [AuthController::class, 'verify'])->name('custom.verify');
+
+Route::get('/club-standings', [ClubStanding::class, 'index'])->name('custom.club_standings.index');
